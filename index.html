@@ -1,0 +1,171 @@
+<head>
+</head>
+<body>
+<style>
+body {
+  margin: 0;
+  background: #000; 
+}
+video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+ background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+.stopfade { 
+   opacity: .5;
+}
+
+#polina { 
+  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+  font-weight:100; 
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 33%;
+  margin:2rem;
+  float: right;
+  font-size: 1.2rem;
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+#polina button { 
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  transition: .3s background;
+}
+#polina button:hover { 
+   background: rgba(0,0,0,0.5);
+}
+
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background; 
+}
+a:hover{
+  background:rgba(0,0,0,0.9);
+}
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  html { background: url(https://thenewcode.com/assets/images/polina.jpg) #000 no-repeat center center fixed; }
+  #bgvid { display: none; }
+}
+</style>
+<script type="text/javascript">
+	var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+</script>
+<embed src="/Users/kai-lin/avon birthday/birthday.mp4" autostart=true hidden=true>
+<video poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" playsinline autoplay muted loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="./videoo.mp4" type="video/webm">
+<source src="./videoo.mp4" type="video/mp4">
+</video>
+<div id="polina">
+<h1>TO AVON</h1>
+<p>made by little black 2017
+<!-- <p><a href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video">Cool</a> -->
+<p>生日快樂！<br>
+對我來講，你是一個很重要的存在，<br>
+所以不管你現在或未來在哪，做什麼事，跟著什麼人，<br>
+都要快樂</p>
+<p>莫忘初衷，成為自己所敬佩和喜歡的那種人，<br>
+不管發生什麼好事或不開心的事<br>
+都要想起自己是一個讓別人感受到溫暖的女生<br>
+是一個有價值也很努力的人<br>
+是一個會想把每件事每個人顧好<br>
+清楚自己的路也努力跑向終點的人</p>
+<p>對我來說，你就像家人一樣<br>
+是一個彼此相知相惜的存在<br>
+我們彼此很瞭解對方，也很欣賞對方的優點<br>
+這是一件很重要的事情</p>
+<p>在每一個時間點，遇到的每一個人都有意義<br>
+而你對我的意義，就像是麥香奶茶配上煙<br>
+是一個甜甜又會上癮的絕佳配料</p>
+<p>在火車上，總會有人上車有人下車<br>
+我很慶幸與你乘坐同一班火車<br>
+看過同一片風景</p>
+<p>這片風景，其實很普通也很特別<br>
+普通的是風景，但特別的是你<br>
+謝謝你，在我只有一次的人生道路上<br>
+與我共享一杯名為歡樂的苦澀咖啡</p>
+<p>跑向終點的路<br>
+最後的一哩米，往往是最難熬的<br>
+我相信妳我都在最後一哩米<br>
+後面的人越來越少了，前面的人也早已看不到背影</p>
+<p>這時能堅持下去的，只有與自己對話的心<br>
+在晝夜交替之間<br>
+在痛苦慾望之間<br>
+在一個個計畫制定之間<br>
+做了無數的猶疑</p>
+<p>我無法保證這是一條贏家的路<br>
+但我能保證這是一條不後悔的路<br>
+因為路一直都在<br>
+但走過，才留得下痕跡</p>
+<p>最後祝福你<br>
+人生不斷碰壁，遇到滿手挫折<br>
+然後浴火重生，成為鳳凰。</p>
+<p>27歲生日快樂 :)<br>
+
+小黑 2017.9.23</p>
+<button>Pause</button>
+</div>
+</body>
