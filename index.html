@@ -1,6 +1,8 @@
 <head>
 <link rel='shortcut icon' type='image/x-icon' href='http://img.freepik.com/free-vector/happy-birthday-background_1344-43.jpg?size=338&ext=jpg' />
 <title>雅方生日快樂</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.0/sweetalert2.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.9.0/sweetalert2.js"></script>
 </head>
 <body>
 <style>
@@ -121,6 +123,49 @@ pauseButton.addEventListener("click", function() {
 <source src="./avonvideo.mp4" type="video/webm">
 <source src="./avonvideo.mp4" type="video/mp4">
 </video>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+
+<script>
+$(function(){
+  var w = $(window).width();
+  var h = $(window).height();
+  $("#show").html(w+":"+h);
+  if (w<700){
+  	alert('目前不支援手機XD 請用電腦觀看:)')
+  }
+});
+function aleBtn(){
+swal({
+  title: '你有信心讓自己成為自己敬佩的人嗎？',
+  text: "請確定再按送出",
+  type: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: '確定',
+  cancelButtonText: '不要',
+  confirmButtonClass: 'btn btn-success',
+  cancelButtonClass: 'btn btn-danger',
+  buttonsStyling: false
+}).then(function () {
+  swal(
+    '加油！妳答應了！',
+    '我相信你一定會超越理想的！',
+    'success'
+  )
+}, function (dismiss) {
+  // dismiss can be 'cancel', 'overlay',
+  // 'close', and 'timer'
+  if (dismiss === 'cancel') {
+    swal(
+      '不行！你要努力的！',
+      '重按一次確定ＸＤ',
+      'error'
+    )
+  }
+})
+  }
+</script>
 <div id="polina">
 <h1>TO AVON</h1>
 <p>made by little black 2017
@@ -168,6 +213,6 @@ pauseButton.addEventListener("click", function() {
 <p>27歲生日快樂 :)<br>
 
 小黑 2017.9.23</p>
-<button>Pause</button>
+<button onclick="aleBtn()">Pause</button>
 </div>
 </body>
